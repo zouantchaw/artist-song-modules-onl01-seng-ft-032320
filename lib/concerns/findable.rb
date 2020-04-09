@@ -1,14 +1,11 @@
-module Memorable
+module Findable 
+
+  module ClassMethods
   
-  module ClassMethods 
-    
-    def reset_all
-    all.clear
+    def find_by_name(name)
+    all.detect{|a| a.name == name}
     end
     
-    def count
-    all.count
-    end
   end 
-  
-end
+
+end 
